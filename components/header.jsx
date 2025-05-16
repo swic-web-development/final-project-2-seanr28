@@ -3,7 +3,7 @@ export default function Header() {
     <header>
       <h1
         className={
-          'mb-10 bg-gradient-to-r from-blue-300 to-yellow-200 bg-clip-text text-center text-5xl font-bold text-transparent uppercase'
+          'mb-20 bg-gradient-to-r from-blue-300 to-yellow-600 bg-clip-text text-center text-5xl font-bold text-transparent uppercase'
         }
       >
         Rick and Morty Verse

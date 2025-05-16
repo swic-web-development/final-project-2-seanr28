@@ -6,7 +6,7 @@ export default function App() {
   const [character, setCharacter] = useState([])
 
   useEffect(() => {
-    const characterID = [1, 2, 3]
+    const characterID = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 361]
     async function fetchSelectedCharacters() {
       try {
         const characterPromises = characterID.map(async (id) => {
