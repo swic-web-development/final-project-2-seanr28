@@ -7,7 +7,7 @@ export default function CharacterGrid({ character }) {
     return (
       <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
         {character.map((character) => (
-          <Card person={character} key={character.uid} />
+          <Card character={character} key={character.uid} />
         ))}
       </div>
     )

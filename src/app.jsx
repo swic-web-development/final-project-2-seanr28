@@ -6,14 +6,13 @@ export default function App() {
   const [character, setCharacter] = useState([])
 
   useEffect(() => {
-    const characterNumber = []
+    const characterID = [1, 2, 3]
     async function fetchSelectedCharacters() {
       try {
-        const characterPromises = characterNumber.map(async (id) => {
-          const response = await fetch(`https://rickandmortyapi.com/api/character${id}`)
-
+        const characterPromises = characterID.map(async (id) => {
+          const response = await fetch(`https://rickandmortyapi.com/api/character/${id}`)
           const data = await response.json()
-          return data.result.properties
+          return data
         })
 
         const selectedCharacters = await Promise.all(characterPromises)
@@ -29,7 +28,7 @@ export default function App() {
   return (
     <main
       className="flex min-h-screen flex-col items-center justify-center bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('')" }}
+      style={{ backgroundImage: "url('/images/portal.jpg')" }}
     >
       <Header />
       <CharacterGrid character={character} />
