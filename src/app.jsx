@@ -6,11 +6,11 @@ export default function App() {
   const [character, setCharacter] = useState([])
 
   useEffect(() => {
-    const characterNumber = [2, 58, 3, 10, 11, 4, 20, 14, 15]
+    const characterNumber = []
     async function fetchSelectedCharacters() {
       try {
         const characterPromises = characterNumber.map(async (id) => {
-          const response = await fetch(`https://www.swapi.tech/api/people/${id}`)
+          const response = await fetch(`https://rickandmortyapi.com/api/character${id}`)
 
           const data = await response.json()
           return data.result.properties
@@ -29,7 +29,7 @@ export default function App() {
   return (
     <main
       className="flex min-h-screen flex-col items-center justify-center bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('/images/space.webp')" }}
+      style={{ backgroundImage: "url('')" }}
     >
       <Header />
       <CharacterGrid character={character} />
